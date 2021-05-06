@@ -4,7 +4,7 @@ import "areopagus/contracts/Governance/Governed.sol";
 import "./IMoCMedianizer.sol";
 
 
-contract ProxyMoCMedianizer is IMoCMedianizer, Governed {
+contract ProxyMoCMedianizer is Governed {
   address public medianizer;
 
   /**
