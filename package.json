@@ -1,0 +1,37 @@
+{
+  "name": "proxy-oracle",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Proxy Oracle",
+  "main": "./contracts/ProxyMoCMedianizer.sol",
+  "scripts": {
+    "test": "truffle test",
+    "truffle-compile": "truffle compile --all",
+    "deploy-moc-testnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network mocTestnet"
+  },
+  "dependencies": {
+    "areopagus": "git+ssh://git@github.com/money-on-chain/Areopagus-Governance.git#v0.3.3",
+    "openzeppelin-eth": "2.2.0",
+    "openzeppelin-solidity": "2.3.0",
+    "zos": "2.3.1",
+    "zos-lib": "2.3.1"
+  },
+  "devDependencies": {
+    "truffle": "5.0.28",
+    "chai": "4.2.0",
+    "truffle-hdwallet-provider": "1.0.14",
+    "ganache-cli": "6.4.4-beta.0",
+    "bignumber.js": "9.0.0",
+    "eslint": "5.16.0",
+    "openzeppelin-test-helpers": "0.4.0",
+    "@zemse/solidity-flattener": "1.5.1"
+  },
+  "keywords": [
+    "oracle",
+    "solidity",
+    "priceFeed",
+    "medianizer"
+  ],
+  "author": "Moneyonchain",
+  "license": "GPL"
+}
