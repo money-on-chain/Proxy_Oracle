@@ -20,17 +20,12 @@ interface IMoCBaseOracle {
 
 ## Already deployed contract
 
-Token pair      | Base Token address                          | Secondary Token address                     | MO
---------------- | ------------------------------------------- | ------------------------------------------- | -----
-DOC/WRBTC        | 0xe700691dA7b9851F2F35f8b8182c69c53CcaD9Db | 0x967f8799aF07DF1534d48A95a5C9FEBE92c53ae0  | Yes
-DOC/RDOC         | 0xe700691dA7b9851F2F35f8b8182c69c53CcaD9Db | 0x2d919F19D4892381D58edeBeca66D5642Cef1a1f  | Yes
-DOC/BPRO         | 0xe700691dA7b9851F2F35f8b8182c69c53CcaD9Db | 0x440CD83C160De5C96Ddb20246815eA44C7aBBCa8  | Yes
-WRBTC/BPRO       | 0x967f8799aF07DF1534d48A95a5C9FEBE92c53ae0 | 0x440CD83C160De5C96Ddb20246815eA44C7aBBCa8  | Yes
-DOC/RIF          | 0xe700691dA7b9851F2F35f8b8182c69c53CcaD9Db | 0x2acc95758f8b5f583470ba265eb685a8f45fc9d5  | Yes
-RDOC/RIFP        | 0x2d919F19D4892381D58edeBeca66D5642Cef1a1f | 0xf4d27c56595Ed59B66cC7F03CFF5193e4bd74a61  | Yes
-RIF/RIFP         | 0x2acc95758f8b5f583470ba265eb685a8f45fc9d5 | 0xf4d27c56595Ed59B66cC7F03CFF5193e4bd74a61  | Yes
-WRBTC/RIF        | 0x967f8799aF07DF1534d48A95a5C9FEBE92c53ae0 | 0x2acc95758f8b5f583470ba265eb685a8f45fc9d5  | No
-
+Enviroment   | Network    | Contract Name       | Proxy Contract Address                     | Implementation Contract Address
+------------ | ---------- | ------------------- | -------------------------------------------|--------------------------------
+mocTestnet   | Testnet    | ProxyMoCMedianizer  | 0xE25F5C08029cDAA3F86e782D79aC3B4578bFaa64 | 0x5604d381E745907Ca0fd50d952B1e88C5B7Ab8DC
+mocMainnet   | Testnet    | ProxyMoCMedianizer  |  | 
+ethTestnet   | Testnet    | ProxyMoCMedianizer  |  | 
+ethMainnet   | Testnet    | ProxyMoCMedianizer  |  | 
 
 ## Deploy 
 
