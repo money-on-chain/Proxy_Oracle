@@ -7,7 +7,11 @@
   "scripts": {
     "test": "truffle test",
     "truffle-compile": "truffle compile --all",
-    "deploy-moc-testnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network mocTestnet"
+    "deploy-moc-testnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network mocTestnet",
+    "deploy-moc-mainnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network mocMainnet",
+    "deploy-eth-testnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network mocTestnet",
+    "deploy-eth-mainnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network ethMainnet",
+    "flatten-contracts": "bash scripts/contract_flattener.sh"
   },
   "dependencies": {
     "areopagus": "git+ssh://git@github.com/money-on-chain/Areopagus-Governance.git#v0.3.3",

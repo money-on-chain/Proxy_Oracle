@@ -9,10 +9,11 @@ module.exports = {
   compilers: {
     solc: {
       version: "0.5.8",
+      evmVersion: 'byzantium',
       settings: {
         optimizer: {
           enabled: true,
-          runs: 1
+          runs: 100
         }
       }
     }
@@ -36,25 +37,37 @@ module.exports = {
       host: 'https://public-node.testnet.rsk.co',
       provider: () => new HDWalletProvider(mnemonic, "https://public-node.testnet.rsk.co"),
       network_id: '*',
-      gasPrice: 68000000
+      gas: 6800000,
+      gasPrice: 68000000,
+      skipDryRun: true,
+      confirmations: 1
     },
     mocMainnet: {
       host: 'https://public-node.rsk.co',
       provider: () => new HDWalletProvider(mnemonic, "https://public-node.rsk.co"),
       network_id: '*',
-      gasPrice: 60000000
+      gas: 6800000,
+      gasPrice: 60000000,
+      skipDryRun: true,
+      confirmations: 1
     },
     ethTestnet: {
       host: 'https://public-node.testnet.rsk.co',
       provider: () => new HDWalletProvider(mnemonic, "https://public-node.testnet.rsk.co"),
       network_id: '*',
-      gasPrice: 68000000
+      gas: 6800000,
+      gasPrice: 68000000,
+      skipDryRun: true,
+      confirmations: 1
     },
     ethMainnet: {
       host: 'https://public-node.rsk.co',
       provider: () => new HDWalletProvider(mnemonic, "https://public-node.rsk.co"),
       network_id: '*',
-      gasPrice: 60000000
+      gas: 6800000,
+      gasPrice: 60000000,
+      skipDryRun: true,
+      confirmations: 1
     }
   }
 };
