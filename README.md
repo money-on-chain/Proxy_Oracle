@@ -1,6 +1,11 @@
 # Proxy Oracle
 
-Proxy Governed Oracle
+This is a proxy contract to MoC Medianizer or Decentralized Oracle, can change (upgrade) the moc medianizer to decentralized oracle
+when new version is ready (soon).
+
+**MoC Medianizer:** Current implementations of oracles.
+**Decentralized Oracle:** Next generations or oracles.
+
 
 ## Interface
 
