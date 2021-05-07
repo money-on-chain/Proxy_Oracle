@@ -8,7 +8,7 @@ import "./ProxyMoCMedianizer.sol";
 /**
   @notice Changer to change the medianizer of the contract
  */
-contract ChangerMedianizer is ChangeContract {
+contract ProxyMoCMedianizerChanger is ChangeContract {
   ProxyMoCMedianizer public proxyMedianizer;
   address public medianizer;
 
