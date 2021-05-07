@@ -5,7 +5,7 @@ Proxy Governed Oracle
 ## Interface
 
 Take a look to Oracle Interface. It return tuple, the price in wei and boolean if is valid result.
-Note: If its not valid consider not used or raise an error because the price is out time limit.
+Note: If its not valid consider not used or raise an error because the price is out of time limit.
 
 ```
 pragma solidity 0.5.8;
@@ -43,7 +43,7 @@ npm run truffle-compile
 
 ### MoC Testnet
 
-1. Deploy Proxy MoC Medianizer Moc Testnet
+Deploy Proxy MoC Medianizer Moc Testnet
 
 ```
 export MNEMONIC=my PK
