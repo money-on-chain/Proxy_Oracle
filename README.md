@@ -4,6 +4,7 @@ This is a proxy contract to MoC Medianizer or Decentralized Oracle, can change (
 when new version is ready (soon).
 
 **MoC Medianizer:** Current implementations of oracles.
+
 **Decentralized Oracle:** Next generations or oracles.
 
 
