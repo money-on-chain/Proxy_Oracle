@@ -9,7 +9,7 @@
     "truffle-compile": "truffle compile --all",
     "deploy-moc-testnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network mocTestnet",
     "deploy-moc-mainnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network mocMainnet",
-    "deploy-eth-testnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network mocTestnet",
+    "deploy-eth-testnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network ethTestnet",
     "deploy-eth-mainnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network ethMainnet",
     "flatten-contracts": "bash scripts/contract_flattener.sh"
   },
