@@ -30,7 +30,7 @@ Enviroment   | Network    | Contract Name       | Proxy Contract Address        
 ------------ | ---------- | ------------------- | -------------------------------------------|--------------------------------
 mocTestnet   | Testnet    | ProxyMoCMedianizer  | 0xE25F5C08029cDAA3F86e782D79aC3B4578bFaa64 | 0x5604d381E745907Ca0fd50d952B1e88C5B7Ab8DC
 mocMainnet   | Testnet    | ProxyMoCMedianizer  |  | 
-ethTestnet   | Testnet    | ProxyMoCMedianizer  |  | 
+ethTestnet   | Testnet    | ProxyMoCMedianizer  | 0xB55866090B93F00a9d7C725D906ea55dBDA3e8D7 | 0x8e2fea7a925f5F7aF7006e351289Fcd0135B1d76
 ethMainnet   | Testnet    | ProxyMoCMedianizer  |  | 
 
 ## Deploy 
