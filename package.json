@@ -11,6 +11,8 @@
     "deploy-moc-mainnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network mocMainnet",
     "deploy-eth-testnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network ethTestnet",
     "deploy-eth-mainnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network ethMainnet",
+    "deploy-tether-testnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network tetherTestnet",
+    "deploy-tether-mainnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network tetherMainnet",
     "flatten-contracts": "bash scripts/contract_flattener.sh"
   },
   "dependencies": {

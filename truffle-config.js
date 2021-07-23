@@ -68,6 +68,24 @@ module.exports = {
       gasPrice: 60000000,
       skipDryRun: true,
       confirmations: 1
+    },
+    tetherTestnet: {
+      host: 'https://public-node.testnet.rsk.co',
+      provider: () => new HDWalletProvider(mnemonic, "https://public-node.testnet.rsk.co"),
+      network_id: '*',
+      gas: 6800000,
+      gasPrice: 68000000,
+      skipDryRun: true,
+      confirmations: 1
+    },
+    tetherMainnet: {
+      host: 'https://public-node.rsk.co',
+      provider: () => new HDWalletProvider(mnemonic, "https://public-node.rsk.co"),
+      network_id: '*',
+      gas: 3800000,
+      gasPrice: 60000000,
+      skipDryRun: true,
+      confirmations: 1
     }
   }
 };

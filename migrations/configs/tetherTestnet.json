@@ -1,0 +1,11 @@
+{
+  "medianizer": "0xB4A44672b55d66fAFA23b4F9Ba28c9C55F76fbfB",
+  "governor": "0x4eAC4518e81B3A5198aADAb998D2610B46aAA609",
+  "admin": "0xffb65F6E24806B7e1A988EeD1Ad07BB2654fF695",
+  "proxyAddresses": {
+    "ProxyMoCMedianizer": "0xB48042419F737f831E93605048B85D1964822269"
+  },
+  "implementationAddresses": {
+    "ProxyMoCMedianizer": "0xEF8e441B577B4e797F485AE684Eb5D5106Cc55Ad"
+  }
+}
