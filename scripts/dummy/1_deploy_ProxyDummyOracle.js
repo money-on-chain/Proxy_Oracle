@@ -1,0 +1,47 @@
+/* eslint-disable no-console */
+const AdminUpgradeabilityProxy = artifacts.require('AdminUpgradeabilityProxy');
+
+const ProxyDummyOracle = artifacts.require('./ProxyDummyOracle.sol');
+
+const { getConfig, getNetwork, saveConfig } = require('./helper');
+
+module.exports = async callback => {
+  try {
+    const network = getNetwork(process.argv);
+    const configPath = `${__dirname}/configs/${network}.json`;
+    const config = getConfig(network, configPath);
+
+    // Deploy new ProxyDummyOracle implementation
+    const dummyOracle = await ProxyDummyOracle.new();
+
+    // Save implementation address to config file
+    config.implementationAddresses.ProxyMoCMedianizer = dummyOracle.address;
+    saveConfig(config, configPath);
+
+    // Initialize contract
+    const initData = await dummyOracle.contract.methods
+      .initialize(
+        '0x0000000000000000000000000000000000000000000000000de0b6b3a7640000', // web3.utils.toHex(10 ** 18)
+        config.governor,
+      )
+      .encodeABI();
+    console.log('ProxyDummyOracle Initialized');
+
+    const proxyDummyOracle = await AdminUpgradeabilityProxy.new(
+      dummyOracle.address,
+      config.admin,
+      initData
+    );
+
+    // Save proxy address to config file
+    config.proxyAddresses.ProxyDummyOracle = proxyDummyOracle.address;
+    saveConfig(config, configPath);
+
+    console.log('DummyOracle proxy address: ', proxyDummyOracle.address);
+    console.log('DummyOracle implementation address: ', dummyOracle.address);
+  } catch (error) {
+    callback(error);
+  }
+
+  callback();
+};
