@@ -42,7 +42,7 @@ contract ProxyMedianizerMocStateCalculatedPrice is ProxyMoCMedianizer {
       (bytes32 medianizerPrice, bool medianizerIsValid) = imedianizer.peek();
 
       if (medianizerIsValid && medianizerPrice != bytes32(0)) {
-        uint256 calculatedPrice = uint256(btcPrice).mul(RATE_PRECISION).div(uint256(medianizerPrice));
+        uint256 calculatedPrice = uint256(medianizerPrice).mul(RATE_PRECISION).div(uint256(btcPrice));
         return (bytes32(calculatedPrice), calculatedPrice != 0);
       }
 

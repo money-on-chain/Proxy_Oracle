@@ -11,7 +11,7 @@ module.exports = async callback => {
     const configPath = `${__dirname}/configs/${network}.json`;
     const config = getConfig(network, configPath);
 
-    console.log(`MoC Medianizer from : ${config.proxyAddresses.ProxyMoCMedianizer}`);
+    console.log(`MoC Medianizer from: ${config.proxyAddresses.ProxyMoCMedianizer}`);
 
     // Get value from contract
     const proxyMedianizer = await ProxyMedianizer.at(config.proxyAddresses.ProxyMoCMedianizer);
