@@ -11,7 +11,7 @@ module.exports = async callback => {
     const configPath = `${__dirname}/configs/${network}.json`;
     const config = getConfig(network, configPath);
 
-    console.log(`ProxyDummyOracle from : ${config.proxyAddresses.ProxyDummyOracle}`);
+    console.log(`ProxyDummyOracle from: ${config.proxyAddresses.ProxyDummyOracle}`);
 
     // Get value from contract
     const proxyDummyOracle = await ProxyDummyOracle.at(config.proxyAddresses.ProxyDummyOracle);
