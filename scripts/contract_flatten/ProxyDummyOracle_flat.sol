@@ -196,29 +196,14 @@ contract Governed is Initializable {
   uint256[50] private upgradeGap;
 }
 
-// File: contracts/IMoCMedianizer.sol
-
-pragma solidity 0.5.8;
-
-/**
- * @dev Interface of MoC Medianizer, compatible with MOC.
- */
-interface IMoCMedianizer {
-  function poke() external;
-  function read() external view returns (bytes32);
-  function peek() external view returns (bytes32, bool);
-  function compute() external view returns (bytes32, bool);
-}
-
-// File: contracts/ProxyMoCMedianizer.sol
+// File: contracts/ProxyDummyOracle.sol
 
 pragma solidity 0.5.8;
 
 
 
-
-contract ProxyMoCMedianizer is Governed {
-  address public medianizer;
+contract ProxyDummyOracle is Governed {
+  bytes32 public value;
 
   /**
     @notice Checks that _address is not zero; fails otherwise
@@ -230,26 +215,23 @@ contract ProxyMoCMedianizer is Governed {
   }
 
   function initialize(
-    address _medianizer,
+    bytes32 _value,
     address _governor
   )
     public
     initializer
-    isValidAddress(_medianizer, "medianizer cannot be null")
     isValidAddress(_governor, "governor cannot be null")
   {
-    medianizer = _medianizer;
+    value = _value;
     Governed.initialize(_governor);
   }
 
   function peek() external view returns (bytes32, bool) {
-    IMoCMedianizer imedianizer = IMoCMedianizer(medianizer);
-    return imedianizer.peek();
+    return (value, true);
   }
 
-  function setMedianizer(address _newMedianizer) public onlyAuthorizedChanger {
-    require(_newMedianizer != address(0), "Medianizer cannot be null");
-    medianizer = _newMedianizer;
+  function setValue(bytes32 _newValue) public onlyAuthorizedChanger {
+    value = _newValue;
   }
 
 }
