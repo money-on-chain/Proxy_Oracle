@@ -21,7 +21,7 @@ module.exports = async callback => {
     // Initialize contract
     const initData = await dummyOracle.contract.methods
       .initialize(
-        '0x0000000000000000000000000000000000000000000000000de0b6b3a7640000', // web3.utils.toHex(10 ** 18)
+        web3.utils.padLeft(web3.utils.numberToHex(10 ** 18), 64),
         config.governor,
       )
       .encodeABI();
