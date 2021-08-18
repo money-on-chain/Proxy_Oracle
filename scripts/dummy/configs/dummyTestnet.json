@@ -2,9 +2,7 @@
   "governor": "0x4eAC4518e81B3A5198aADAb998D2610B46aAA609",
   "admin": "0xffb65F6E24806B7e1A988EeD1Ad07BB2654fF695",
   "proxyAddresses": {
-    "ProxyDummyOracle": "0xb71DBFaE4EC1653a3335D8270AC9077766E64339"
   },
   "implementationAddresses": {
-    "ProxyMoCMedianizer": "0xEe8A1Af26Bc0e98666B7ad73159F5c17895417C0"
   }
 }
