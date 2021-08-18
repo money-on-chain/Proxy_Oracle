@@ -15,7 +15,7 @@ module.exports = async callback => {
     const dummyOracle = await ProxyDummyOracle.new();
 
     // Save implementation address to config file
-    config.implementationAddresses.ProxyMoCMedianizer = dummyOracle.address;
+    config.implementationAddresses.ProxyDummyOracle = dummyOracle.address;
     saveConfig(config, configPath);
 
     const mocPrecision = 10 ** 18;
