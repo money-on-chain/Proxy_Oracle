@@ -1,4 +1,4 @@
-# Tether Calculated Price USDT/DOC
+# DOC Dummy Price DOC/USD
 
 ## Usage
 
