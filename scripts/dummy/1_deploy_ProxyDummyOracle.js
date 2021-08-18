@@ -18,10 +18,12 @@ module.exports = async callback => {
     config.implementationAddresses.ProxyMoCMedianizer = dummyOracle.address;
     saveConfig(config, configPath);
 
+    const mocPrecision = 10 ** 18;
+
     // Initialize contract
     const initData = await dummyOracle.contract.methods
       .initialize(
-        web3.utils.padLeft(web3.utils.numberToHex(10 ** 18), 64),
+        web3.utils.padLeft(web3.utils.numberToHex(mocPrecision), 64),
         config.governor,
       )
       .encodeABI();
