@@ -7,6 +7,7 @@
 first install required packages
 
 ```
+nvm install 8.17
 npm install
 ```
 
