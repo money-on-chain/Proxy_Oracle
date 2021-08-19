@@ -82,3 +82,20 @@ npm run <check-script>
 ```
 
 Replace `<check-script>` with the *Check script* that comes out of the table above, depending on the *Oracle* and the *Network*
+
+Example:
+
+```
+user@workstation:~/Proxy_Oracle$ npm run check-moc-testnet
+
+> proxy-oracle@1.0.0 check-moc-testnet /home/user/Proxy_Oracle
+> cd migrations/; truffle exec 3_check_ProxyMoCMedianizer.js --network mocTestnet
+
+Using network 'mocTestnet'.
+
+Configuration path:  /home/user/Proxy_Oracle/migrations/configs/mocTestnet.json
+ProxyMoCMedianizer from: 0xb76c405Dfd042D88FD7b8dd2e5d66fe7974A1458
+Price from contract: 45574.27795462
+Valid?: true
+user@workstation:~/Proxy_Oracle$
+```
