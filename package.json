@@ -13,7 +13,17 @@
     "deploy-eth-mainnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network ethMainnet",
     "deploy-tether-testnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network tetherTestnet",
     "deploy-tether-mainnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network tetherMainnet",
-    "flatten-contracts": "bash scripts/contract_flattener.sh"
+    "deploy-rif-testnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network rifTestnet",
+    "deploy-rif-mainnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network rifMainnet",
+    "flatten-contracts": "bash scripts/contract_flattener.sh",
+    "check-moc-testnet": "cd migrations/; truffle exec 3_check_ProxyMoCMedianizer.js --network mocTestnet",  
+    "check-moc-mainnet": "cd migrations/; truffle exec 3_check_ProxyMoCMedianizer.js --network mocMainnet",
+    "check-eth-testnet": "cd migrations/; truffle exec 3_check_ProxyMoCMedianizer.js --network ethTestnet",
+    "check-eth-mainnet": "cd migrations/; truffle exec 3_check_ProxyMoCMedianizer.js --network ethMainnet",
+    "check-tether-testnet": "cd migrations/; truffle exec 3_check_ProxyMoCMedianizer.js --network tetherTestnet",
+    "check-tether-mainnet": "cd migrations/; truffle exec 3_check_ProxyMoCMedianizer.js --network tetherMainnet",
+    "check-rif-testnet": "cd migrations/; truffle exec 3_check_ProxyMoCMedianizer.js --network rifTestnet",
+    "check-rif-mainnet": "cd migrations/; truffle exec 3_check_ProxyMoCMedianizer.js --network rifMainnet"
   },
   "dependencies": {
     "areopagus": "git+ssh://git@github.com/money-on-chain/Areopagus-Governance.git#v0.3.3",
