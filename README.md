@@ -35,7 +35,7 @@ interface IMoCBaseOracle {
 | tetherTestnet | Testnet | `ProxyMoCMedianizer` | `0xB48042419F737f831E93605048B85D1964822269` | `0xEF8e441B577B4e797F485AE684Eb5D5106Cc55Ad` |
 | tetherMainnet | Mainnet | `ProxyMoCMedianizer` | `0x45c907727eD15Bd901560Ff439293E6b89de877e` | `0xc78599497c42245627C69cc7CBb27F95Bb2B9646` |
 | rifTestnet    | Testnet | `ProxyMoCMedianizer` | `0xd153c1eDd498f66BC9d6D8069ECBBc2fb2fEcd4b` | `0xe664D22aa3d37b9Be1a545A1b540cFEd40B3E72b` |
-| rifMainnet    | Mainnet | `ProxyMoCMedianizer` | *it's still pending*                         | *it's still pending*                         |
+| rifMainnet    | Mainnet | `ProxyMoCMedianizer` | `0xDb76a2816Def5Dd206Ba0A8a50b7b57f414ef17D` | `0x997eF33BE0D599AB3Df4792039a14fb3cF3CAEaC` |
 
 ## Procedure 
 
