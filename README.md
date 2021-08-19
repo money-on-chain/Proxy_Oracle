@@ -26,18 +26,18 @@ interface IMoCBaseOracle {
 
 ## Already deployed contract
 
-Enviroment    | Network | Contract Name      | Proxy Contract Address                     | Implementation Contract Address
-------------- | ------- | ------------------ | -------------------------------------------|-------------------------------------------
-mocTestnet    | Testnet | ProxyMoCMedianizer | 0xE25F5C08029cDAA3F86e782D79aC3B4578bFaa64 | 0x5604d381E745907Ca0fd50d952B1e88C5B7Ab8DC
-mocMainnet    | Mainnet | ProxyMoCMedianizer |                                            |                                           
-ethTestnet    | Testnet | ProxyMoCMedianizer | 0xB55866090B93F00a9d7C725D906ea55dBDA3e8D7 | 0x8e2fea7a925f5F7aF7006e351289Fcd0135B1d76
-ethMainnet    | Mainnet | ProxyMoCMedianizer | 0x84c260568cFE148dBcFb4C8cc62C4e0b6d998F91 | 0xbCb80B5551e56B7241275211068d3f56615E4590
-tetherTestnet | Testnet | ProxyMoCMedianizer | 0xB48042419F737f831E93605048B85D1964822269 | 0xEF8e441B577B4e797F485AE684Eb5D5106Cc55Ad
-tetherMainnet | Mainnet | ProxyMoCMedianizer | 0x45c907727eD15Bd901560Ff439293E6b89de877e | 0xc78599497c42245627C69cc7CBb27F95Bb2B9646 
-rifTestnet    | Testnet | ProxyMoCMedianizer |                                            |                                           
-rifMainnet    | Mainnet | ProxyMoCMedianizer |                                            |                                           
+| Enviroment    | Network | Contract Name        | Proxy Contract Address                       | Implementation Contract Address              |
+| ------------- | ------- | :------------------: | :------------------------------------------: | :------------------------------------------: |
+| mocTestnet    | Testnet | `ProxyMoCMedianizer` | `0xE25F5C08029cDAA3F86e782D79aC3B4578bFaa64` | `0x5604d381E745907Ca0fd50d952B1e88C5B7Ab8DC` |
+| mocMainnet    | Mainnet | `ProxyMoCMedianizer` | *it's still pending*                         | *it's still pending*                         |
+| ethTestnet    | Testnet | `ProxyMoCMedianizer` | `0xB55866090B93F00a9d7C725D906ea55dBDA3e8D7` | `0x8e2fea7a925f5F7aF7006e351289Fcd0135B1d76` |
+| ethMainnet    | Mainnet | `ProxyMoCMedianizer` | `0x84c260568cFE148dBcFb4C8cc62C4e0b6d998F91` | `0xbCb80B5551e56B7241275211068d3f56615E4590` |
+| tetherTestnet | Testnet | `ProxyMoCMedianizer` | `0xB48042419F737f831E93605048B85D1964822269` | `0xEF8e441B577B4e797F485AE684Eb5D5106Cc55Ad` |
+| tetherMainnet | Mainnet | `ProxyMoCMedianizer` | `0x45c907727eD15Bd901560Ff439293E6b89de877e` | `0xc78599497c42245627C69cc7CBb27F95Bb2B9646` |
+| rifTestnet    | Testnet | `ProxyMoCMedianizer` | *it's still pending*                         | *it's still pending*                         |
+| rifMainnet    | Mainnet | `ProxyMoCMedianizer` | *it's still pending*                         | *it's still pending*                         |
 
-## Deploy 
+## Procedure 
 
 first install required packages
 
@@ -51,74 +51,34 @@ compile truffle
 npm run truffle-compile
 ```
 
-### MoC Testnet
+### Scripts
 
-Deploy Proxy MoC Medianizer Moc Testnet
+| Oracle | Network | Deploy script           | Check script           |
+| ------ | ------- | ----------------------- | ---------------------- |
+| MoC    | Testnet | `deploy-moc-testnet`    | `check-moc-testnet`    |
+| MoC    | Mainnet | `deploy-moc-mainnet`    | `check-moc-mainnet`    |
+| Eth    | Testnet | `deploy-eth-testnet`    | `check-eth-testnet`    |
+| Eth    | Mainnet | `deploy-eth-mainnet`    | `check-eth-mainnet`    |
+| Tether | Testnet | `deploy-tether-testnet` | `check-tether-testnet` |
+| Tether | Mainnet | `deploy-tether-mainnet` | `check-tether-mainnet` |
+| RIF    | Testnet | `deploy-rif-testnet`    | `check-rif-testnet`    |
+| RIF    | Mainnet | `deploy-rif-mainnet`    | `check-rif-mainnet`    |
 
-```
-export MNEMONIC=my PK
-npm run deploy-moc-testnet
-```
-
-### MoC Mainnet
-
-Deploy Proxy MoC Medianizer Moc Mainnet
-
-```
-export MNEMONIC=my PK
-npm run deploy-moc-mainnet
-```
-
-### Eth Testnet
-
-Deploy Proxy MoC Medianizer Eth Testnet
+### Deploy
 
 ```
-export MNEMONIC=my PK
-npm run deploy-eth-testnet
+export MNEMONIC=<my-private-key>
+npm run <deploy-script>
 ```
 
-### Eth Mainnet
+Replace `<my-private-key>` with the private key that will do the deploy
 
-Deploy Proxy MoC Medianizer Eth Mainnet
+Replace `<deploy-script>` with the *Deploy script* that comes out of the table above, depending on the *Oracle* and the *Network*
 
-```
-export MNEMONIC=my PK
-npm run deploy-eth-mainnet
-```
-
-### Tether Testnet
-
-Deploy Proxy MoC Medianizer USDT Testnet
+### Check
 
 ```
-export MNEMONIC=my PK
-npm run deploy-tether-testnet
+npm run <check-script>
 ```
 
-### Tether Mainnet
-
-Deploy Proxy MoC Medianizer USDT Mainnet
-
-```
-export MNEMONIC=my PK
-npm run deploy-tether-mainnet
-```
-
-### RIF Testnet
-
-Deploy Proxy MoC Medianizer RIF Testnet
-
-```
-export MNEMONIC=my PK
-npm run deploy-rif-testnet
-```
-
-### RIF Mainnet
-
-Deploy Proxy MoC Medianizer RIF Mainnet
-
-```
-export MNEMONIC=my PK
-npm run deploy-rif-mainnet
-```
+Replace `<check-script>` with the *Check script* that comes out of the table above, depending on the *Oracle* and the *Network*
