@@ -75,6 +75,23 @@ Replace `<my-private-key>` with the private key that will do the deploy
 
 Replace `<deploy-script>` with the *Deploy script* that comes out of the table above, depending on the *Oracle* and the *Network*
 
+Example:
+
+```
+user@workstation:~/Proxy_Oracle$ npm run deploy-rif-testnet
+
+> proxy-oracle@1.0.0 deploy-rif-testnet /home/user/Proxy_Oracle
+> cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network rifTestnet
+
+Using network 'rifTestnet'.
+
+Configuration path:  /home/user/Proxy_Oracle/migrations/configs/rifTestnet.json
+ProxyMoCMedianizer Initialized
+MoCMedianizer proxy address:  0xd153c1eDd498f66BC9d6D8069ECBBc2fb2fEcd4b
+MoCMedianizer implementation address:  0xe664D22aa3d37b9Be1a545A1b540cFEd40B3E72b
+user@workstation:~/Proxy_Oracle$
+```
+
 ### Check
 
 ```
