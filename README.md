@@ -53,16 +53,20 @@ npm run truffle-compile
 
 ### Scripts
 
-| Oracle | Network | Deploy script           | Check script           |
-| ------ | ------- | ----------------------- | ---------------------- |
-| MoC    | Testnet | `deploy-moc-testnet`    | `check-moc-testnet`    |
-| MoC    | Mainnet | `deploy-moc-mainnet`    | `check-moc-mainnet`    |
-| Eth    | Testnet | `deploy-eth-testnet`    | `check-eth-testnet`    |
-| Eth    | Mainnet | `deploy-eth-mainnet`    | `check-eth-mainnet`    |
-| Tether | Testnet | `deploy-tether-testnet` | `check-tether-testnet` |
-| Tether | Mainnet | `deploy-tether-mainnet` | `check-tether-mainnet` |
-| RIF    | Testnet | `deploy-rif-testnet`    | `check-rif-testnet`    |
-| RIF    | Mainnet | `deploy-rif-mainnet`    | `check-rif-mainnet`    |
+| Oracle     | Network | Deploy script                      | Check script                      |
+| ---------- | ------- | ---------------------------------- | --------------------------------- |
+| MoC        | Testnet | `deploy-moc-testnet`               | `check-moc-testnet`               |
+| MoC        | Mainnet | `deploy-moc-mainnet`               | `check-moc-mainnet`               |
+| Eth        | Testnet | `deploy-eth-testnet`               | `check-eth-testnet`               |
+| Eth        | Mainnet | `deploy-eth-mainnet`               | `check-eth-mainnet`               |
+| Tether     | Testnet | `deploy-tether-testnet`            | `check-tether-testnet`            |
+| Tether     | Mainnet | `deploy-tether-mainnet`            | `check-tether-mainnet`            |
+| RIF        | Testnet | `deploy-rif-testnet`               | `check-rif-testnet`               |
+| RIF        | Mainnet | `deploy-rif-mainnet`               | `check-rif-mainnet`               |
+| Calculated | Testnet | `deploy-calculated-tether-testnet` | `check-calculated-tether-testnet` |
+| Calculated | Mainnet | `deploy-calculated-tether-mainnet` | `check-calculated-tether-mainnet` | 
+| Dummy      | Testnet | `deploy-dummy-testnet`             | `check-dummy-testnet`             |
+| Dummy      | Mainnet | `deploy-dummy-mainnet`             | `check-dummy-mainnet`             |
 
 ### Deploy
 
