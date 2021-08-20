@@ -26,16 +26,20 @@ interface IMoCBaseOracle {
 
 ## Already deployed contract
 
-| Enviroment    | Network | Contract Name        | Proxy Contract Address                       | Implementation Contract Address              |
-| ------------- | ------- | :------------------: | :------------------------------------------: | :------------------------------------------: |
-| mocTestnet    | Testnet | `ProxyMoCMedianizer` | `0xE25F5C08029cDAA3F86e782D79aC3B4578bFaa64` | `0x5604d381E745907Ca0fd50d952B1e88C5B7Ab8DC` |
-| mocMainnet    | Mainnet | `ProxyMoCMedianizer` | *it's still pending*                         | *it's still pending*                         |
-| ethTestnet    | Testnet | `ProxyMoCMedianizer` | `0xB55866090B93F00a9d7C725D906ea55dBDA3e8D7` | `0x8e2fea7a925f5F7aF7006e351289Fcd0135B1d76` |
-| ethMainnet    | Mainnet | `ProxyMoCMedianizer` | `0x84c260568cFE148dBcFb4C8cc62C4e0b6d998F91` | `0xbCb80B5551e56B7241275211068d3f56615E4590` |
-| tetherTestnet | Testnet | `ProxyMoCMedianizer` | `0xB48042419F737f831E93605048B85D1964822269` | `0xEF8e441B577B4e797F485AE684Eb5D5106Cc55Ad` |
-| tetherMainnet | Mainnet | `ProxyMoCMedianizer` | `0x45c907727eD15Bd901560Ff439293E6b89de877e` | `0xc78599497c42245627C69cc7CBb27F95Bb2B9646` |
-| rifTestnet    | Testnet | `ProxyMoCMedianizer` | `0xd153c1eDd498f66BC9d6D8069ECBBc2fb2fEcd4b` | `0xe664D22aa3d37b9Be1a545A1b540cFEd40B3E72b` |
-| rifMainnet    | Mainnet | `ProxyMoCMedianizer` | `0xDb76a2816Def5Dd206Ba0A8a50b7b57f414ef17D` | `0x997eF33BE0D599AB3Df4792039a14fb3cF3CAEaC` |
+| Pair         | Network | Proxy Contract Address                       | Implementation Contract Address              | Contract Name                            | Enviroment    |
+| ------------ | ------- | :------------------------------------------: | :------------------------------------------: | ---------------------------------------- | ------------- |
+| `BTC`/`USD`  | Testnet | `0xE25F5C08029cDAA3F86e782D79aC3B4578bFaa64` | `0x5604d381E745907Ca0fd50d952B1e88C5B7Ab8DC` | `ProxyMoCMedianizer`                     | mocTestnet    |
+| `BTC`/`USD`  | Mainnet | *it's still pending*                         | *it's still pending*                         | `ProxyMoCMedianizer`                     | mocMainnet    |
+| `ETH`/`USD`  | Testnet | `0xB55866090B93F00a9d7C725D906ea55dBDA3e8D7` | `0x8e2fea7a925f5F7aF7006e351289Fcd0135B1d76` | `ProxyMoCMedianizer`                     | ethTestnet    |
+| `ETH`/`USD`  | Mainnet | `0x84c260568cFE148dBcFb4C8cc62C4e0b6d998F91` | `0xbCb80B5551e56B7241275211068d3f56615E4590` | `ProxyMoCMedianizer`                     | ethMainnet    |
+| `BTC`/`USDT` | Testnet | `0xB48042419F737f831E93605048B85D1964822269` | `0xEF8e441B577B4e797F485AE684Eb5D5106Cc55Ad` | `ProxyMoCMedianizer`                     | tetherTestnet |
+| `BTC`/`USDT` | Mainnet | `0x45c907727eD15Bd901560Ff439293E6b89de877e` | `0xc78599497c42245627C69cc7CBb27F95Bb2B9646` | `ProxyMoCMedianizer`                     | tetherMainnet |
+| `RIF`/`USD`  | Testnet | `0xd153c1eDd498f66BC9d6D8069ECBBc2fb2fEcd4b` | `0xe664D22aa3d37b9Be1a545A1b540cFEd40B3E72b` | `ProxyMoCMedianizer`                     | rifTestnet    |
+| `RIF`/`USD`  | Mainnet | `0xDb76a2816Def5Dd206Ba0A8a50b7b57f414ef17D` | `0x997eF33BE0D599AB3Df4792039a14fb3cF3CAEaC` | `ProxyMoCMedianizer`                     | rifMainnet    |
+| `USDT`/`USD` | Testnet | `0xb0445b003F701a99eD1a733d8C3Eb2bDa58D7622` | `0xa81ffD4d154917a28575A0717530865E466b2636` | `ProxyMedianizerMocStateCalculatedPrice` | tetherTestnet |
+| `USDT`/`USD` | Mainnet | `0x45c907727eD15Bd901560Ff439293E6b89de877e` | `0xc78599497c42245627C69cc7CBb27F95Bb2B9646` | `ProxyMedianizerMocStateCalculatedPrice` | tetherMainnet |
+| `DOC`/`USD`  | Testnet | `0x0e8E63721E49dbde105a4085b3D548D292Edf38A` | `0xF13Fc9FDbbf059497815d834864ABc300aAe13e1` | `ProxyDummyOracle`                       | dummyTestnet  |
+| `DOC`/`USD`  | Mainnet | `0xb1a98C46f9b9Ce9f4b26d5A44f8a70375e06aC02` | `0x2958a89d955E674A44bde1f834254586E736c451` | `ProxyDummyOracle`                       | dummyMainnet  |
 
 ## Procedure 
 
