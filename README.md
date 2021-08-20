@@ -37,7 +37,7 @@ interface IMoCBaseOracle {
 | `RIF`/`USD`  | Testnet | `0xd153c1eDd498f66BC9d6D8069ECBBc2fb2fEcd4b` | `0xe664D22aa3d37b9Be1a545A1b540cFEd40B3E72b` | `ProxyMoCMedianizer`                     | rifTestnet    |
 | `RIF`/`USD`  | Mainnet | `0xDb76a2816Def5Dd206Ba0A8a50b7b57f414ef17D` | `0x997eF33BE0D599AB3Df4792039a14fb3cF3CAEaC` | `ProxyMoCMedianizer`                     | rifMainnet    |
 | `USDT`/`USD` | Testnet | `0xb0445b003F701a99eD1a733d8C3Eb2bDa58D7622` | `0xa81ffD4d154917a28575A0717530865E466b2636` | `ProxyMedianizerMocStateCalculatedPrice` | tetherTestnet |
-| `USDT`/`USD` | Mainnet | `0x45c907727eD15Bd901560Ff439293E6b89de877e` | `0xc78599497c42245627C69cc7CBb27F95Bb2B9646` | `ProxyMedianizerMocStateCalculatedPrice` | tetherMainnet |
+| `USDT`/`USD` | Mainnet | `0xA0159078eAA91396edf8Db9A5c1646Da92515725` | `0xa00e53cF9b836C7b9aE73eB093b4D86f530EE3F9` | `ProxyMedianizerMocStateCalculatedPrice` | tetherMainnet |
 | `DOC`/`USD`  | Testnet | `0x0e8E63721E49dbde105a4085b3D548D292Edf38A` | `0xF13Fc9FDbbf059497815d834864ABc300aAe13e1` | `ProxyDummyOracle`                       | dummyTestnet  |
 | `DOC`/`USD`  | Mainnet | `0xb1a98C46f9b9Ce9f4b26d5A44f8a70375e06aC02` | `0x2958a89d955E674A44bde1f834254586E736c451` | `ProxyDummyOracle`                       | dummyMainnet  |
 
