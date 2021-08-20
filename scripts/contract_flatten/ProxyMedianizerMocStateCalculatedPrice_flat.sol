@@ -21,6 +21,108 @@ If you have any questions, comments or interest in pursuing any other use cases,
 
 */
 // SPDX-License-Identifier: 
+// File: openzeppelin-eth/contracts/math/SafeMath.sol
+
+pragma solidity ^0.5.2;
+
+/**
+ * @title SafeMath
+ * @dev Unsigned math operations with safety checks that revert on error
+ */
+library SafeMath {
+    /**
+     * @dev Multiplies two unsigned integers, reverts on overflow.
+     */
+    function mul(uint256 a, uint256 b) internal pure returns (uint256) {
+        // Gas optimization: this is cheaper than requiring 'a' not being zero, but the
+        // benefit is lost if 'b' is also tested.
+        // See: https://github.com/OpenZeppelin/openzeppelin-solidity/pull/522
+        if (a == 0) {
+            return 0;
+        }
+
+        uint256 c = a * b;
+        require(c / a == b);
+
+        return c;
+    }
+
+    /**
+     * @dev Integer division of two unsigned integers truncating the quotient, reverts on division by zero.
+     */
+    function div(uint256 a, uint256 b) internal pure returns (uint256) {
+        // Solidity only automatically asserts when dividing by 0
+        require(b > 0);
+        uint256 c = a / b;
+        // assert(a == b * c + a % b); // There is no case in which this doesn't hold
+
+        return c;
+    }
+
+    /**
+     * @dev Subtracts two unsigned integers, reverts on overflow (i.e. if subtrahend is greater than minuend).
+     */
+    function sub(uint256 a, uint256 b) internal pure returns (uint256) {
+        require(b <= a);
+        uint256 c = a - b;
+
+        return c;
+    }
+
+    /**
+     * @dev Adds two unsigned integers, reverts on overflow.
+     */
+    function add(uint256 a, uint256 b) internal pure returns (uint256) {
+        uint256 c = a + b;
+        require(c >= a);
+
+        return c;
+    }
+
+    /**
+     * @dev Divides two unsigned integers and returns the remainder (unsigned integer modulo),
+     * reverts when dividing by zero.
+     */
+    function mod(uint256 a, uint256 b) internal pure returns (uint256) {
+        require(b != 0);
+        return a % b;
+    }
+}
+
+// File: openzeppelin-eth/contracts/math/Math.sol
+
+pragma solidity ^0.5.2;
+
+/**
+ * @title Math
+ * @dev Assorted math operations
+ */
+library Math {
+    /**
+     * @dev Returns the largest of two numbers.
+     */
+    function max(uint256 a, uint256 b) internal pure returns (uint256) {
+        return a >= b ? a : b;
+    }
+
+    /**
+     * @dev Returns the smallest of two numbers.
+     */
+    function min(uint256 a, uint256 b) internal pure returns (uint256) {
+        return a < b ? a : b;
+    }
+
+    /**
+     * @dev Calculates the average of two numbers. Since these are integers,
+     * averages of an even and odd number cannot be represented, and will be
+     * rounded down.
+     */
+    function average(uint256 a, uint256 b) internal pure returns (uint256) {
+        // (a + b) / 2 can overflow, so we distribute
+        return (a / 2) + (b / 2) + ((a % 2 + b % 2) / 2);
+    }
+}
+
 // File: areopagus/contracts/Governance/ChangeContract.sol
 
 pragma solidity 0.5.8;
@@ -250,6 +352,89 @@ contract ProxyMoCMedianizer is Governed {
   function setMedianizer(address _newMedianizer) public onlyAuthorizedChanger {
     require(_newMedianizer != address(0), "Medianizer cannot be null");
     medianizer = _newMedianizer;
+  }
+
+}
+
+// File: contracts/IMocState.sol
+
+pragma solidity 0.5.8;
+
+/**
+ * @notice Interface for MocState price providers relevant methods
+ */
+interface IMocState {
+
+  /**
+  * @dev BPro USD PRICE
+  * @return the BPro USD Price [using mocPrecision]
+  */
+  function bproUsdPrice() external view returns(uint256);
+
+  /**
+  * @dev BTC price of BPro
+  * @return the BPro Tec Price [using reservePrecision]
+  */
+  function bproTecPrice() external view returns(uint256);
+
+  /**
+  * @dev Gets the BTCPriceProviderAddress
+  * @return btcPriceProvider blocks there are in a day
+  **/
+  function getBtcPriceProvider() external view returns(address);
+}
+
+// File: contracts/ProxyMedianizerMocStateCalculatedPrice.sol
+
+pragma solidity 0.5.8;
+
+
+
+
+
+
+contract ProxyMedianizerMocStateCalculatedPrice is ProxyMoCMedianizer {
+
+  using SafeMath for uint256;
+  IMocState public mocState;
+  uint256 public constant RATE_PRECISION = uint256(10**18);
+
+  function initialize(
+    address _medianizer,
+    address _governor,
+    IMocState _mocState
+  )
+    public
+    initializer
+    isValidAddress(_medianizer, "medianizer cannot be null")
+    isValidAddress(_governor, "governor cannot be null")
+  {
+    medianizer = _medianizer;
+    mocState = _mocState;
+    Governed.initialize(_governor);
+  }
+
+  function peek() external view returns (bytes32, bool) {
+
+    // Getting Price from MoCState (MoC Os Platform)
+    // MocState BtcPriceProvider is complient with IMoCMedianizer interface
+    IMoCMedianizer priceMocState = IMoCMedianizer(mocState.getBtcPriceProvider());
+    (bytes32 btcPrice, bool isValid) = priceMocState.peek();
+
+    // Only if MocState BtcPriceProvider has a valid price
+    if (isValid && btcPrice != bytes32(0)) {
+
+      // The price from medianizer
+      IMoCMedianizer imedianizer = IMoCMedianizer(medianizer);
+      (bytes32 medianizerPrice, bool medianizerIsValid) = imedianizer.peek();
+
+      if (medianizerIsValid && medianizerPrice != bytes32(0)) {
+        uint256 calculatedPrice = uint256(btcPrice).mul(RATE_PRECISION).div(uint256(medianizerPrice));
+        return (bytes32(calculatedPrice), calculatedPrice != 0);
+      }
+
+    }
+    return (0, false);
   }
 
 }
