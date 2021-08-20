@@ -21,10 +21,12 @@ npm run truffle-compile
 Deploy Proxy Dummy Oracle testnet
 
 ```
-export MNEMONIC=my PK
+export MNEMONIC=<my-private-key>
 cd scripts/dummy
 truffle exec 1_deploy_ProxyDummyOracle.js --network dummyTestnet
 ```
+
+Replace `<my-private-key>` with the private key that will do the deploy
 
 ### Check deploy
 
