@@ -29,7 +29,7 @@ interface IMoCBaseOracle {
 | Pair         | Network | Proxy Contract Address                       | Implementation Contract Address              | Contract Name                            | Enviroment    |
 | ------------ | ------- | :------------------------------------------: | :------------------------------------------: | ---------------------------------------- | ------------- |
 | `BTC`/`USD`  | Testnet | `0xb76c405Dfd042D88FD7b8dd2e5d66fe7974A1458` | `0xC3A9B88BD40ab144B377B32045062847b79A84Be` | `ProxyMoCMedianizer`                     | mocTestnet    |
-| `BTC`/`USD`  | Mainnet | *it's still pending*                         | *it's still pending*                         | `ProxyMoCMedianizer`                     | mocMainnet    |
+| `BTC`/`USD`  | Mainnet | `0x972a21C61B436354C0F35836195D7B67f54E482C` | `0xEC1Ac4d34319Ba7B6bbD920C168413320Edd0f4F` | `ProxyMoCMedianizer`                     | mocMainnet    |
 | `ETH`/`USD`  | Testnet | `0xB55866090B93F00a9d7C725D906ea55dBDA3e8D7` | `0x8e2fea7a925f5F7aF7006e351289Fcd0135B1d76` | `ProxyMoCMedianizer`                     | ethTestnet    |
 | `ETH`/`USD`  | Mainnet | `0x84c260568cFE148dBcFb4C8cc62C4e0b6d998F91` | `0xbCb80B5551e56B7241275211068d3f56615E4590` | `ProxyMoCMedianizer`                     | ethMainnet    |
 | `BTC`/`USDT` | Testnet | `0xB48042419F737f831E93605048B85D1964822269` | `0xEF8e441B577B4e797F485AE684Eb5D5106Cc55Ad` | `ProxyMoCMedianizer`                     | tetherTestnet |
