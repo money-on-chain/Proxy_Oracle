@@ -32,12 +32,12 @@ interface IMoCBaseOracle {
 | `BTC`/`USD`  | Mainnet | `0x972a21C61B436354C0F35836195D7B67f54E482C` | `0xEC1Ac4d34319Ba7B6bbD920C168413320Edd0f4F` | `ProxyMoCMedianizer`                     | mocMainnet    |
 | `ETH`/`USD`  | Testnet | `0xB55866090B93F00a9d7C725D906ea55dBDA3e8D7` | `0x8e2fea7a925f5F7aF7006e351289Fcd0135B1d76` | `ProxyMoCMedianizer`                     | ethTestnet    |
 | `ETH`/`USD`  | Mainnet | `0x84c260568cFE148dBcFb4C8cc62C4e0b6d998F91` | `0xbCb80B5551e56B7241275211068d3f56615E4590` | `ProxyMoCMedianizer`                     | ethMainnet    |
-| `BTC`/`USDT` | Testnet | `0xB48042419F737f831E93605048B85D1964822269` | `0xEF8e441B577B4e797F485AE684Eb5D5106Cc55Ad` | `ProxyMoCMedianizer`                     | tetherTestnet |
-| `BTC`/`USDT` | Mainnet | `0x45c907727eD15Bd901560Ff439293E6b89de877e` | `0xc78599497c42245627C69cc7CBb27F95Bb2B9646` | `ProxyMoCMedianizer`                     | tetherMainnet |
+| `USDT`/`USD` | Testnet | `0xB48042419F737f831E93605048B85D1964822269` | `0xEF8e441B577B4e797F485AE684Eb5D5106Cc55Ad` | `ProxyMoCMedianizer`                     | tetherTestnet |
+| `USDT`/`USD` | Mainnet | `0x45c907727eD15Bd901560Ff439293E6b89de877e` | `0xc78599497c42245627C69cc7CBb27F95Bb2B9646` | `ProxyMoCMedianizer`                     | tetherMainnet |
 | `RIF`/`USD`  | Testnet | `0xd153c1eDd498f66BC9d6D8069ECBBc2fb2fEcd4b` | `0xe664D22aa3d37b9Be1a545A1b540cFEd40B3E72b` | `ProxyMoCMedianizer`                     | rifTestnet    |
 | `RIF`/`USD`  | Mainnet | `0xDb76a2816Def5Dd206Ba0A8a50b7b57f414ef17D` | `0x997eF33BE0D599AB3Df4792039a14fb3cF3CAEaC` | `ProxyMoCMedianizer`                     | rifMainnet    |
-| `USDT`/`USD` | Testnet | `0xb0445b003F701a99eD1a733d8C3Eb2bDa58D7622` | `0xa81ffD4d154917a28575A0717530865E466b2636` | `ProxyMedianizerMocStateCalculatedPrice` | tetherTestnet |
-| `USDT`/`USD` | Mainnet | `0xA0159078eAA91396edf8Db9A5c1646Da92515725` | `0xa00e53cF9b836C7b9aE73eB093b4D86f530EE3F9` | `ProxyMedianizerMocStateCalculatedPrice` | tetherMainnet |
+| `BTC`/`USDT` | Testnet | `0x3Cdc0DbA0e52205bc92e5d0dA705a11bD7970D89` | `0xFF9B789EAefDBc9ac917d84C3BC2aC99e3BEf6F4` | `ProxyMedianizerMocStateCalculatedPrice` | tetherTestnet |
+| `BTC`/`USDT` | Mainnet | `NA`                                         | `NA`                                         | `ProxyMedianizerMocStateCalculatedPrice` | tetherMainnet |
 | `DOC`/`USD`  | Testnet | `0x0e8E63721E49dbde105a4085b3D548D292Edf38A` | `0xF13Fc9FDbbf059497815d834864ABc300aAe13e1` | `ProxyDummyOracle`                       | dummyTestnet  |
 | `DOC`/`USD`  | Mainnet | `0xb1a98C46f9b9Ce9f4b26d5A44f8a70375e06aC02` | `0x2958a89d955E674A44bde1f834254586E736c451` | `ProxyDummyOracle`                       | dummyMainnet  |
 

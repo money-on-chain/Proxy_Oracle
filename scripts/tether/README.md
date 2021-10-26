@@ -38,7 +38,7 @@ You will get a response like this:
 Using network 'tetherTestnet'.
 
 Configuration path:  /configs/tetherTestnet.json
-MoC Medianizer from: 0xb0445b003F701a99eD1a733d8C3Eb2bDa58D7622
-Price from contract: 0.999189012426422561
+MoC Medianizer from: 0x3Cdc0DbA0e52205bc92e5d0dA705a11bD7970D89
+Price from contract: 62059.211225821749128906
 Valid?: true
 ```
