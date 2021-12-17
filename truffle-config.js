@@ -122,6 +122,15 @@ module.exports = {
       gasPrice: 60000000,
       skipDryRun: true,
       confirmations: 1
+    },
+    bscTestnet: {
+      host: 'http://10.10.0.190:8575',
+      provider: () => new HDWalletProvider(process.env.PRIVATE_KEY, "http://10.10.0.190:8575"),
+      network_id: '97',
+      gas: 3800000,
+      gasPrice: 1000000000,
+      skipDryRun: true,
+      confirmations: 1
     }
   }
 };
