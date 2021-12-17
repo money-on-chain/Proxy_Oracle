@@ -1,0 +1,6 @@
+{
+  "governor": "0x5Dc20f7Db2bc933111a825A1b0282bf323990f21",
+  "pancake_factory": "0x9Ac64Cc6e4415144C455BD8E4837Fea55603e5c3",
+  "pancake_router": "0xD99D1c33F9fC3444f8101754aBC46c52416550D1",
+  "PancakePriceOracle": "0x130E640D3E5eee46CcFd2478C3959F6A730B486C"
+}
