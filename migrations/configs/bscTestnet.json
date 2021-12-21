@@ -3,5 +3,10 @@
   "admin": "0x091C7644C31e15f582968047b6906fEb0d0b7Fc1",
   "pancake_factory": "0xb7926c0430afb07aa7defde6da862ae0bde767bc",
   "pancake_router": "0x9ac64cc6e4415144c455bd8e4837fea55603e5c3",
-  "PancakePriceOracle": "0xa76aE032E70c7B9A79f8481C408FB00d797DB05f"
+  "implementationAddresses": {
+    "pancakePriceOracle": "0x9BB369B011C525e75AB7ec860751a8Ba3ccFA40C"
+  },
+  "proxyAddresses": {
+    "pancakePriceOracle": "0x0C9545402F9A393cEe8E2b5F0EA8b06C3b24fae8"
+  }
 }
