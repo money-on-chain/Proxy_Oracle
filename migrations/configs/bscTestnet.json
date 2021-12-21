@@ -1,6 +1,7 @@
 {
-  "governor": "0x5Dc20f7Db2bc933111a825A1b0282bf323990f21",
-  "pancake_factory": "0x9Ac64Cc6e4415144C455BD8E4837Fea55603e5c3",
-  "pancake_router": "0xD99D1c33F9fC3444f8101754aBC46c52416550D1",
-  "PancakePriceOracle": "0x130E640D3E5eee46CcFd2478C3959F6A730B486C"
+  "governor": "0x0bcDFE6e20cbEC82C9e0151Fb04766Ff2d358233",
+  "admin": "0x091C7644C31e15f582968047b6906fEb0d0b7Fc1",
+  "pancake_factory": "0xb7926c0430afb07aa7defde6da862ae0bde767bc",
+  "pancake_router": "0x9ac64cc6e4415144c455bd8e4837fea55603e5c3",
+  "PancakePriceOracle": "0xa76aE032E70c7B9A79f8481C408FB00d797DB05f"
 }
