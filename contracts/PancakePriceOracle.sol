@@ -21,7 +21,7 @@ contract PancakePriceOracle is Governed {
 
   // -------------------------------
   IPancakeRouter public pancakeRouter;
-  address[] public path = new address[](2);
+  address[] public path; // = new address[](2);
 
   /**
     @param _governor address of the governor
@@ -42,6 +42,7 @@ contract PancakePriceOracle is Governed {
   {
     Governed.initialize(_governor);
     pancakeRouter = IPancakeRouter(_pancakeRouter);
+    path = new address[](2);
     _setPair(token0, token1);
   }
 
@@ -76,6 +77,7 @@ contract PancakePriceOracle is Governed {
   function _setPair(address token0, address token1) private {
     // Check tokens
     require(token0 != address(0) && token1 != address(0), "Pair: token address (0) not allowed");
+    require(_getTokenDecimals(token0) == 18, "Pair: Token0 must have 18 decimals");
     require(_getTokenDecimals(token1) == 18, "Pair: Token1 must have 18 decimals");
 
     // Check pair existance
@@ -105,11 +107,11 @@ contract PancakePriceOracle is Governed {
 
   /**
   @notice Query the current price of path[0]/path[1] on Pancakeswap
-  @return price = Price of 1 unit of token0 expressed in token1. Returns 0 if there's no price available (Liquidity ).
+  @return price = Price of 1 unit of token0 expressed in token1.
   @return isValid = Returns true or false if reserves are less than minimumReserves.
    */
   function peek() external view returns (bytes32 price, bool isValid) {
-    uint256[] memory amounts = pancakeRouter.getAmountsOut(10**IERC20(path[0]).decimals(), path);
+    uint256[] memory amounts = pancakeRouter.getAmountsOut(1 ether, path);
     price = bytes32(amounts[1]);
     isValid = true;
   }
