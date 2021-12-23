@@ -21,38 +21,32 @@ contract PancakePriceOracle is Governed {
 
   // -------------------------------
   IPancakeRouter public pancakeRouter;
-  address[] public path; // = new address[](2);
+  address[] public path; 
 
   /**
     @param _governor address of the governor
     @param _pancakeRouter address of Pancake Router
-    @param token0 address of token 0 (pair: token0 / token1)
-    @param token1 address of token 1 (pair: token0 / token1)
+    @param _path path of token addresses 
    */
   function initialize(
     address _governor,
     address _pancakeRouter,
-    address token0,
-    address token1
+    address [] memory _path
   ) public initializer
     isValidAddress(_governor, "governor cannot be null")
     isValidAddress(_pancakeRouter, "pancake router cannot be null")
-    isValidAddress(token0, "token0 cannot be null")
-    isValidAddress(token1, "token1 cannot be null")
   {
     Governed.initialize(_governor);
     pancakeRouter = IPancakeRouter(_pancakeRouter);
-    path = new address[](2);
-    _setPair(token0, token1);
+    _setPath(_path);
   }
 
   // ************************************
   // *** --- Restricted functions --- ***
   // ************************************
 
-  // *** Faltan ACCESS CONTROLS ****
-  function setPair(address newToken0, address newToken1) public onlyAuthorizedChanger {
-    _setPair(newToken0, newToken1);
+  function setPath(address [] memory _path) public onlyAuthorizedChanger {
+    _setPath(_path);
   }
 
   // *********************
@@ -62,9 +56,12 @@ contract PancakePriceOracle is Governed {
   /**
     @dev Returns decimals of token0 / token1
   */
-  function getPairDecimals() public view returns (uint8 token0decimals, uint8 token1decimals) {
-    token0decimals = IERC20(path[0]).decimals();
-    token1decimals = IERC20(path[1]).decimals();
+  function getPairDecimals() public view returns (uint8[] memory decimals ) {
+      uint x;
+      decimals = new uint8[](path.length);
+      for(x=0; x<path.length; x++) {
+        decimals[0] = IERC20(path[x]).decimals();
+      }
   }
 
   // *************************
@@ -74,18 +71,18 @@ contract PancakePriceOracle is Governed {
   /**
     @notice set Pancake pair to query price after checking existance and liquidity
   */
-  function _setPair(address token0, address token1) private {
-    // Check tokens
-    require(token0 != address(0) && token1 != address(0), "Pair: token address (0) not allowed");
-    require(_getTokenDecimals(token0) == 18, "Pair: Token0 must have 18 decimals");
-    require(_getTokenDecimals(token1) == 18, "Pair: Token1 must have 18 decimals");
+  function _setPath(address [] memory newPath) private {
+      uint x;
+      path = new address[](newPath.length);
 
-    // Check pair existance
-    address pairAddress = _getPairAddress(token0, token1);
-    require(pairAddress != address(0), "Pair: Not created yet");
+      path[0]=newPath[0];
+      require(_getTokenDecimals(newPath[0]) == 18, "Tokens must have 18 decimals");
 
-    path[0] = token0;
-    path[1] = token1;
+      for(x=1; x<newPath.length; x++) {
+	path[x]=newPath[x];
+        require( _getPairAddress(path[x-1], path[x])!=address(0), "PancakePriceOracle: No pair in pancake for this tokens");
+        require(_getTokenDecimals(newPath[x]) == 18, "Tokens must have 18 decimals");
+      }
   }
 
   function _getPairAddress(address token0, address token1) private view returns (address) {
@@ -112,7 +109,7 @@ contract PancakePriceOracle is Governed {
    */
   function peek() external view returns (bytes32 price, bool isValid) {
     uint256[] memory amounts = pancakeRouter.getAmountsOut(1 ether, path);
-    price = bytes32(amounts[1]);
+    price = bytes32(amounts[path.length-1]);
     isValid = true;
   }
 }

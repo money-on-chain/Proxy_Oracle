@@ -4,9 +4,11 @@
   "pancake_factory": "0xb7926c0430afb07aa7defde6da862ae0bde767bc",
   "pancake_router": "0x9ac64cc6e4415144c455bd8e4837fea55603e5c3",
   "implementationAddresses": {
-    "pancakePriceOracle": "0x9BB369B011C525e75AB7ec860751a8Ba3ccFA40C"
+    "moc_usdt_pancake_oracle": "0x8457Bda4b02EFC3f8c2EB730A178940072687143",
+    "vtc_usdt_pancake_oracle": "0x8457Bda4b02EFC3f8c2EB730A178940072687143"
   },
   "proxyAddresses": {
-    "pancakePriceOracle": "0x0C9545402F9A393cEe8E2b5F0EA8b06C3b24fae8"
+    "moc_usdt_pancake_oracle": "0xCDd7C3B23cBFa541595bc3bBB61E883695EcCF13",
+    "vtc_usdt_pancake_oracle": "0x9F9374A61D55eA5960C10c825De9d41355bAa3C9"
   }
 }
