@@ -1,0 +1,18 @@
+{
+  "governor": "0x0bcDFE6e20cbEC82C9e0151Fb04766Ff2d358233",
+  "admin": "0x091C7644C31e15f582968047b6906fEb0d0b7Fc1",
+  "pancake_factory": "0xb7926c0430afb07aa7defde6da862ae0bde767bc",
+  "pancake_router": "0x9ac64cc6e4415144c455bd8e4837fea55603e5c3",
+  "implementationAddresses": {
+    "moc_usdt_pancake_oracle": "0xAd375E35bEcfd5d2472557708e8F132c8783AE74",
+    "vtc_usdt_pancake_oracle": "0xAd375E35bEcfd5d2472557708e8F132c8783AE74",
+    "bnbUsd_chainlink": "0xE7335dC5195a703Edf4D60B5f5426247cCB17f2D",
+    "aaveUsd_chainlink": "0xE7335dC5195a703Edf4D60B5f5426247cCB17f2D"
+  },
+  "proxyAddresses": {
+    "moc_usdt_pancake_oracle": "0x8077E6401390780F80d86a71eFa4a7817B3969B0",
+    "vtc_usdt_pancake_oracle": "0xcd351539df7E1E37A91AB41ba166ECaB9700d28d",
+    "bnbUsd_chainlink": "0xA69b1324A148579bA35eC35A018F011b7635D93a",
+    "aaveUsd_chainlink": "0x9A5981196cB0Ab4EFdb0E6733112e12aa6e9f6E4"
+  }
+}

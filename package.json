@@ -16,7 +16,7 @@
     "deploy-rif-testnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network rifTestnet",
     "deploy-rif-mainnet": "cd migrations/; truffle exec 2_deploy_ProxyMoCMedianizer.js --network rifMainnet",
     "flatten-contracts": "bash scripts/contract_flattener.sh",
-    "check-moc-testnet": "cd migrations/; truffle exec 3_check_ProxyMoCMedianizer.js --network mocTestnet",  
+    "check-moc-testnet": "cd migrations/; truffle exec 3_check_ProxyMoCMedianizer.js --network mocTestnet",
     "check-moc-mainnet": "cd migrations/; truffle exec 3_check_ProxyMoCMedianizer.js --network mocMainnet",
     "check-eth-testnet": "cd migrations/; truffle exec 3_check_ProxyMoCMedianizer.js --network ethTestnet",
     "check-eth-mainnet": "cd migrations/; truffle exec 3_check_ProxyMoCMedianizer.js --network ethMainnet",
@@ -25,13 +25,13 @@
     "check-rif-testnet": "cd migrations/; truffle exec 3_check_ProxyMoCMedianizer.js --network rifTestnet",
     "check-rif-mainnet": "cd migrations/; truffle exec 3_check_ProxyMoCMedianizer.js --network rifMainnet",
     "deploy-calculated-tether-testnet": "cd scripts/tether/; truffle exec 1_deploy_ProxyMedianizerMocStateCalculatedPrice.js --network tetherTestnet",
-    "deploy-calculated-tether-mainnet": "cd scripts/tether/; truffle exec 1_deploy_ProxyMedianizerMocStateCalculatedPrice.js --network tetherMainnet",   
+    "deploy-calculated-tether-mainnet": "cd scripts/tether/; truffle exec 1_deploy_ProxyMedianizerMocStateCalculatedPrice.js --network tetherMainnet",
     "check-calculated-tether-testnet": "cd scripts/tether/; truffle exec 2_check_deploy.js --network tetherTestnet",
-    "check-calculated-tether-mainnet": "cd scripts/tether/; truffle exec 2_check_deploy.js --network tetherMainnet",   
+    "check-calculated-tether-mainnet": "cd scripts/tether/; truffle exec 2_check_deploy.js --network tetherMainnet",
     "deploy-dummy-testnet": "cd scripts/dummy/; truffle exec 1_deploy_ProxyDummyOracle.js --network dummyTestnet",
-    "deploy-dummy-mainnet": "cd scripts/dummy/; truffle exec 1_deploy_ProxyDummyOracle.js --network dummyMainnet",   
+    "deploy-dummy-mainnet": "cd scripts/dummy/; truffle exec 1_deploy_ProxyDummyOracle.js --network dummyMainnet",
     "check-dummy-testnet": "cd scripts/dummy/; truffle exec 2_check_deploy.js --network dummyTestnet",
-    "check-dummy-mainnet": "cd scripts/dummy/; truffle exec 2_check_deploy.js --network dummyMainnet" 
+    "check-dummy-mainnet": "cd scripts/dummy/; truffle exec 2_check_deploy.js --network dummyMainnet"
   },
   "dependencies": {
     "areopagus": "git+ssh://git@github.com/money-on-chain/Areopagus-Governance.git#v0.3.3",
