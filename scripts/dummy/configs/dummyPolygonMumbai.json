@@ -1,0 +1,10 @@
+{
+  "governor": "0x0F93d6b43206a3E5baEb044bfC314bA386F7E573",
+  "admin": "0xd3acE4eD2749dFaB73038fe15de151094cEfc010",
+  "proxyAddresses": {
+    "ProxyDummyOracle": "0x8Ce70d8E324Fd3D86a931ce4838861eba0Ee1463"
+  },
+  "implementationAddresses": {
+    "ProxyDummyOracle": "0x7A022713A09900C1a58431c5a234486AeF3E7Db1"
+  }
+}

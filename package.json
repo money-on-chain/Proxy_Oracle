@@ -31,7 +31,9 @@
     "deploy-dummy-testnet": "cd scripts/dummy/; truffle exec 1_deploy_ProxyDummyOracle.js --network dummyTestnet",
     "deploy-dummy-mainnet": "cd scripts/dummy/; truffle exec 1_deploy_ProxyDummyOracle.js --network dummyMainnet",
     "check-dummy-testnet": "cd scripts/dummy/; truffle exec 2_check_deploy.js --network dummyTestnet",
-    "check-dummy-mainnet": "cd scripts/dummy/; truffle exec 2_check_deploy.js --network dummyMainnet"
+    "check-dummy-mainnet": "cd scripts/dummy/; truffle exec 2_check_deploy.js --network dummyMainnet",
+    "deploy-dummy-polygon-mumbai": "cd scripts/dummy/; truffle exec 1_deploy_ProxyDummyOracle.js --network dummyPolygonMumbai",
+    "check-dummy-polygon-mumbai": "cd scripts/dummy/; truffle exec 2_check_deploy.js --network dummyPolygonMumbai"
   },
   "dependencies": {
     "areopagus": "git+ssh://git@github.com/money-on-chain/Areopagus-Governance.git#v0.3.3",
@@ -43,12 +45,15 @@
   "devDependencies": {
     "truffle": "5.0.28",
     "chai": "4.2.0",
-    "truffle-hdwallet-provider": "1.0.14",
+    "@truffle/hdwallet-provider": "1.4.3",
     "ganache-cli": "6.4.4-beta.0",
     "bignumber.js": "9.0.0",
     "eslint": "5.16.0",
     "openzeppelin-test-helpers": "0.4.0",
     "@zemse/solidity-flattener": "1.5.1"
+  },
+  "engines": {
+    "node": "=8.17.0"
   },
   "keywords": [
     "oracle",
