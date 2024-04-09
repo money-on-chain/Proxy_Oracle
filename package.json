@@ -36,7 +36,7 @@
     "check-dummy-polygon-mumbai": "cd scripts/dummy/; truffle exec 2_check_deploy.js --network dummyPolygonMumbai"
   },
   "dependencies": {
-    "areopagus": "git+ssh://git@github.com/money-on-chain/Areopagus-Governance.git#v0.3.3",
+    "areopagus": "https://github.com/money-on-chain/Areopagus-Governance.git#v0.3.3",
     "openzeppelin-eth": "2.2.0",
     "openzeppelin-solidity": "2.3.0",
     "zos": "2.3.1",
