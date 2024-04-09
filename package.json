@@ -35,7 +35,9 @@
     "deploy-dummy-polygon-mumbai": "cd scripts/dummy/; truffle exec 1_deploy_ProxyDummyOracle.js --network dummyPolygonMumbai",
     "check-dummy-polygon-mumbai": "cd scripts/dummy/; truffle exec 2_check_deploy.js --network dummyPolygonMumbai",
     "deploy-bproARS-testnet": "cd scripts/bpro_conversion/; truffle exec 1_deploy_ProxyMedianizerBproUsdConversion.js --network bproARSTestnet",
-    "check-bproARS-testnet": "cd scripts/bpro_conversion/; truffle exec 2_check_deploy.js --network bproARSTestnet"
+    "check-bproARS-testnet": "cd scripts/bpro_conversion/; truffle exec 2_check_deploy.js --network bproARSTestnet",
+    "deploy-bproCOP-testnet": "cd scripts/bpro_conversion/; truffle exec 1_deploy_ProxyMedianizerBproUsdConversion.js --network bproCOPTestnet",
+    "check-bproCOP-testnet": "cd scripts/bpro_conversion/; truffle exec 2_check_deploy.js --network bproCOPTestnet"
   },
   "dependencies": {
     "areopagus": "https://github.com/money-on-chain/Areopagus-Governance.git#v0.3.3",
