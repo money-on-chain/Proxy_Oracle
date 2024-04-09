@@ -131,7 +131,7 @@ module.exports = {
       skipDryRun: true,
       confirmations: 1,
     },
-    dummyPolygonMumbai: {
+    /*dummyPolygonMumbai: {
       host: 'https://rpc-mumbai.maticvigil.com/',
       provider: new HDWalletProvider(mnemonic, 'https://rpc-mumbai.maticvigil.com/'),
       network_id: 80001,
@@ -143,6 +143,15 @@ module.exports = {
       disableConfirmationListener: true,
       networkCheckTimeout: 100000,
       timeoutBlocks: 200,
-    }
+    },*/
+    bproARSTestnet: {
+      host: "https://public-node.testnet.rsk.co",
+      provider: () => new HDWalletProvider(mnemonic, "https://public-node.testnet.rsk.co"),
+      network_id: "*",
+      gas: 6800000,
+      gasPrice: 68000000,
+      skipDryRun: true,
+      confirmations: 1,
+    },
   },
 };
