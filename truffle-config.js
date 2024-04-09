@@ -1,4 +1,4 @@
-const HDWalletProvider = require("truffle-hdwallet-provider");
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 
 const mnemonic = process.env.MNEMONIC || "lab direct float merit wall huge wheat loyal maple cup battle butter";
 
@@ -131,5 +131,18 @@ module.exports = {
       skipDryRun: true,
       confirmations: 1,
     },
+    dummyPolygonMumbai: {
+      host: 'https://rpc-mumbai.maticvigil.com/',
+      provider: new HDWalletProvider(mnemonic, 'https://rpc-mumbai.maticvigil.com/'),
+      network_id: 80001,
+      gas: 2000000,
+      //gas: 6000000,
+      gasPrice: 33000000000,
+      skipDryRun: true,
+      confirmations: 2,
+      disableConfirmationListener: true,
+      networkCheckTimeout: 100000,
+      timeoutBlocks: 200,
+    }
   },
 };
