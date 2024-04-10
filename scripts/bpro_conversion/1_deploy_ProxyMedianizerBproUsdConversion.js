@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const AdminUpgradeabilityProxy = artifacts.require('AdminUpgradeabilityProxy');
 
-const ProxyMedianizerBproUsdConversion = artifacts.require('./ProxyMedianizerBproUsdConversion.sol');
+const ProxyMedianizerBproUsdConversion = artifacts.require('./ProxyMedianizerBproUsdConversion2.sol');
 
 const { getConfig, getNetwork, saveConfig } = require('./helper');
 

@@ -4,9 +4,9 @@
   "governor": "0x4eAC4518e81B3A5198aADAb998D2610B46aAA609",
   "admin": "0xffb65F6E24806B7e1A988EeD1Ad07BB2654fF695",
   "proxyAddresses": {
-    "ProxyMoCMedianizer": "0x441f1a28eFDe1D9ec5CA8154F8124A2b13Aeb1B8"
+    "ProxyMoCMedianizer": "0xAD84A2B815F38b3917B57863D9302086011220C4"
   },
   "implementationAddresses": {
-    "ProxyMoCMedianizer": "0x82d8B4c7E36B892C8467Eda335BFC39Bb46eE968"
+    "ProxyMoCMedianizer": "0xa5380093e52b7dC835D56F9B2C67c92E66660e77"
   }
 }

@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const AdminUpgradeabilityProxy = artifacts.require('AdminUpgradeabilityProxy');
 
-const ProxyOracleBproUsd = artifacts.require('./ProxyOracleBproUsd.sol');
+const ProxyOracleBproUsd = artifacts.require('./ProxyOracleBproUsd2.sol');
 
 const { getConfig, getNetwork, saveConfig } = require('./helper');
 
