@@ -33,7 +33,13 @@
     "check-dummy-testnet": "cd scripts/dummy/; truffle exec 2_check_deploy.js --network dummyTestnet",
     "check-dummy-mainnet": "cd scripts/dummy/; truffle exec 2_check_deploy.js --network dummyMainnet",
     "deploy-dummy-polygon-mumbai": "cd scripts/dummy/; truffle exec 1_deploy_ProxyDummyOracle.js --network dummyPolygonMumbai",
-    "check-dummy-polygon-mumbai": "cd scripts/dummy/; truffle exec 2_check_deploy.js --network dummyPolygonMumbai"
+    "check-dummy-polygon-mumbai": "cd scripts/dummy/; truffle exec 2_check_deploy.js --network dummyPolygonMumbai",
+    "deploy-bproARS-testnet": "cd scripts/bpro_conversion/; truffle exec 1_deploy_ProxyMedianizerBproUsdConversion.js --network bproARSTestnet",
+    "check-bproARS-testnet": "cd scripts/bpro_conversion/; truffle exec 2_check_deploy.js --network bproARSTestnet",
+    "deploy-bproCOP-testnet": "cd scripts/bpro_conversion/; truffle exec 1_deploy_ProxyMedianizerBproUsdConversion.js --network bproCOPTestnet",
+    "check-bproCOP-testnet": "cd scripts/bpro_conversion/; truffle exec 2_check_deploy.js --network bproCOPTestnet",
+    "deploy-bpro-testnet": "cd scripts/bpro_oracle/; truffle exec 1_deploy_ProxyOracleBproUsd.js --network bproTestnet",
+    "check-bpro-testnet": "cd scripts/bpro_oracle/; truffle exec 2_check_deploy.js --network bproTestnet"
   },
   "dependencies": {
     "areopagus": "https://github.com/money-on-chain/Areopagus-Governance.git#v0.3.3",
