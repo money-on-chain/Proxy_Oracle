@@ -170,6 +170,15 @@ module.exports = {
       gasPrice: 68000000,
       skipDryRun: true,
       confirmations: 1,
+    },
+    rocTestnetV2: {
+      host: "https://public-node.testnet.rsk.co",
+      provider: () => new HDWalletProvider(mnemonic, "https://public-node.testnet.rsk.co"),
+      network_id: "*",
+      gas: 1680000,
+      gasPrice: 68000000,
+      skipDryRun: true,
+      confirmations: 1,
     }
   },
 };
