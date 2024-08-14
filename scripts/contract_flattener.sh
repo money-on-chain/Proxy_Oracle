@@ -2,7 +2,7 @@
 
 FLATTENER="node_modules/.bin/truffle-flattener"
 OUTPUTDIR="scripts/contract_flatten/"
-CONTRACTS="contracts/ProxyMoCMedianizer.sol contracts/ProxyMedianizerMocStateCalculatedPrice.sol contracts/ProxyDummyOracle.sol zos-lib/contracts/upgradeability/AdminUpgradeabilityProxy.sol"
+CONTRACTS="contracts/ProxyMoCMedianizer.sol contracts/ProxyMedianizerMocStateCalculatedPrice.sol contracts/ProxyDummyOracle.sol zos-lib/contracts/upgradeability/AdminUpgradeabilityProxy.sol contracts/ProxyMedianizerBproUsdConversion2.sol contracts/ProxyOracleBproUsd2.sol"
 HEADER="scripts/license.txt"
 
 # Working directory: the root of the project
