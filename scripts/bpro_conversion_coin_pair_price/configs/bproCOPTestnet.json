@@ -1,0 +1,12 @@
+{
+  "coinpairprice": "0x81852EEEA69A20D12A47A257EA4756847527E9E5",
+  "mocstate": "0x0adb40132cB0ffcEf6ED81c26A1881e214100555",
+  "governor": "0x4eAC4518e81B3A5198aADAb998D2610B46aAA609",
+  "admin": "0xffb65F6E24806B7e1A988EeD1Ad07BB2654fF695",
+  "proxyAddresses": {
+    "ProxyMoCCoinPairPrice": "0x2eA0BF7125cD4C077a1f9F476D82978945162FaD"
+  },
+  "implementationAddresses": {
+    "ProxyMoCCoinPairPrice": "0xd35e2C5a31947871258fe8FD16c57426BE334e84"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "coinpairprice": "0xD3872fEE8B5F3070C67A138Ef6aC710B7196786e",
+  "mocstate": "0xb9C42EFc8ec54490a37cA91c423F7285Fa01e257",
+  "governor": "0xC61F0392d5170214b5D93C0BC4c4354163aBC1f7",
+  "admin": "0x009C51E1f6feDcDB8014Ea9AE1E39B6dbF2AC0EC",
+  "proxyAddresses": {
+  },
+  "implementationAddresses": {
+  }
+}
