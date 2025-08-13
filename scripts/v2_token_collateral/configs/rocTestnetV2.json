@@ -1,0 +1,14 @@
+{
+  "mocV2": "0xa416934264515bb381E3b746f10f22D5c6f9431a",
+  "tpAddress": "0x8dbf326e12a9fF37ED6DDF75adA548C2640A6482",
+  "governor": "0x4eAC4518e81B3A5198aADAb998D2610B46aAA609",
+  "admin": "0xffb65F6E24806B7e1A988EeD1Ad07BB2654fF695",
+  "proxyAddresses": {
+    "ProxyV2TecPrice": "0x72B6F48328Ff1f8234AE75511c3cAc7768583526",
+    "ProxyV2RifProPrice": "0x0283aD845c8663a552C8D69A00aA2ac89cb26b10"
+  },
+  "implementationAddresses": {
+    "ProxyV2TecPrice": "0x3Bd769bdE62d93C4059CE1D6B634739478BDcf38",
+    "ProxyV2RifProPrice": "0x7aF4Ba8525Aa7B53664Bfe113bbB5cA6Be628Ad7"
+  }
+}
